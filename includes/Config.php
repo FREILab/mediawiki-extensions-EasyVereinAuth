@@ -1,11 +1,11 @@
 <?php
-namespace MediaWiki\Extension\NaylorAMS;
+namespace MediaWiki\Extension\EasyVereinAuth;
 
 use GlobalVarConfig;
 
 class Config extends GlobalVarConfig {
 	public function __construct() {
-		parent::__construct( 'wgNaylorAMS_' );
+		parent::__construct( 'wgEasyVereinAuth_' );
 	}
 
 	/**

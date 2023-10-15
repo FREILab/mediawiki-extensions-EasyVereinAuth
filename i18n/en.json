@@ -1,4 +1,4 @@
 {
-	"naylorams-desc": "Authentication extension to integrate Naylor AMS Timberlake SSO",
-	"naylorams-loginbtn-text": "Log in with Naylor AMS"
+	"easyvereinauth-desc": "Authentication extension to integrate with easyVerein",
+	"easyvereinauth-loginbtn-text": "Log in with easyVerein credentials"
 }

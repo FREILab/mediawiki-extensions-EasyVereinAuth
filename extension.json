@@ -1,39 +1,33 @@
 {
-	"name": "Naylor AMS SSO Integration",
+	"name": "EasyVereinAuth",
 	"version": "0.1.0",
 	"author": [
-		"[https://github.com/mywikis MyWikis LLC]"
+		"[https://github.com/FREILab FREILab Freiburg e.V.]"
 	],
-	"url": "https://github.com/mywikis/NaylorAMS",
-	"descriptionmsg": "naylorams-desc",
+	"url": "https://github.com/FREILab",
+	"descriptionmsg": "easyvereinauth-desc",
 	"license-name": "GPL-2.0",
 	"type": "other",
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\EasyVereinAuth\\": "includes/"
+	},
 	"requires": {
 		"MediaWiki": ">= 1.31.0",
 		"extensions": {
-			"PluggableAuth": ">= 5.1"
+			"PluggableAuth": "7.*"
 		}
 	},
 	"MessagesDirs": {
-		"NaylorAMS": [
+		"EasyVereinAuth": [
 			"i18n"
 		]
 	},
-	"ExtensionFunctions": [
-		"MediaWiki\\Extension\\NaylorAMS\\Setup::init"
-	],
-	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\NaylorAMS\\": "includes/"
-	},
-	"config": {
-		"PluggableAuth_Class": {
-			"value": "MediaWiki\\Extension\\NaylorAMS\\NaylorAMS"
-		},
-		"PluggableAuth_ButtonLabelMessage": {
-			"value": "naylorams-loginbtn-text"
-		},
-		"NaylorAMS_UsernameDenyList": {
-			"value": []
+    "callback": "MediaWiki\\Extension\\EasyVereinAuth\\EasyVereinAuthHooks::onRegistration",
+	"attributes": {
+		"PluggableAuth": {
+			"EasyVereinAuth": {
+				"class": "MediaWiki\\Extension\\EasyVereinAuth\\EasyVereinAuth"
+			}
 		}
 	},
 	"manifest_version": 2
